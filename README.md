@@ -1,4 +1,4 @@
-#Pokemon API
+# Pokemon API
 
 * Clone this repo
 * CD into the directory root ``pokemon`` directory and type ``npm i`` in your terminal to install dependencies
