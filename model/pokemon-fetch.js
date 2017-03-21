@@ -17,12 +17,8 @@
     this.species = opts.species.name;
     this.weight = opts.weight;
     this.height = opts.height;
-    //displays a comma separated list of the Pokemon's types if it has more than one, otherwise, just show the single one
-    if(opts.types[1]){
-      this.types = `${opts.types[0].type.name}, ${opts.types[1].type.name}`;
-    } else {
-      this.types = opts.types[0].type.name;
-    }
+    //displays a comma separated list of the Pokemon's types
+    this.types = opts.types.map(t => t.type.name);
     //grab the ability names to show as comma separated list
     this.abilities = opts.abilities.map(a => a.ability.name);
   }
@@ -35,7 +31,7 @@
         superagent.get(`${pokemonURL}/${i}`)
         .then(res => {
 
-          $('.spinner').show();
+          // $('.spinner').show();
 
           let pokemon = new Pokemon(res.body);
           let viewObj = pokemonView.render('.pokemon-template', pokemon);
@@ -50,6 +46,7 @@
         })
         .catch(err => reject(err));
       }
+      resolve($('.spinner'));
     });
   };
 
