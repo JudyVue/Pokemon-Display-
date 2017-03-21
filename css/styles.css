@@ -35,6 +35,10 @@ td {
   cursor: pointer;
 }
 
+h3 {
+  display: none;
+}
+
 .buttons {
   margin-top: 2em;
 }
