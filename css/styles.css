@@ -1,0 +1,44 @@
+table {
+  display: flex;
+  max-width: 80%;
+}
+
+th {
+  padding-right: 3.5em;
+}
+
+td {
+  padding-right: 2em;
+}
+
+.next {
+  margin-left: 80%;
+}
+
+.abilities {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.up {
+  cursor: pointer;
+}
+
+.down {
+  cursor: pointer;
+}
+
+h3 {
+  display: none;
+}
+
+.buttons {
+  margin-top: 2em;
+}

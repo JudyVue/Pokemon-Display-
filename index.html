@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Pokemon Table</title>
+  </head>
+  <body>
+
+  <script class="pokemon-template" type="text/x-handlebars-template">
+      <tr>
+        <td>{{ name }}</td>
+        <td>{{ types }}</td>
+        <td>{{ species }}</td>
+        <td>{{ weight }} grams</td>
+        <td>{{ height }} centimeters</td>
+        <td class="down"><span>&dArr;</span></td>
+        <td class="up"><span>&uArr;</span></td>
+        <td class="abilities">Abilities: {{ abilities }} </td>
+      </tr>
+
+
+  </script>
+
+  <section class="pokemon-container">
+    <table>
+      <tr>
+        <th>Name </th>
+        <th>Types</th>
+        <th>Species</th>
+        <th>Weight</th>
+        <th>Height</th>
+      </tr>
+
+    </table>
+  </section>
+  <h3>This is the first section of Pokemon</h3>
+
+  <section class="buttons">
+    <span><button class="prev">Prev</button></span>
+    <span><button class="next">Next</button></span>
+  </section>
+
+
+  <!-- third party scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.5.1/superagent.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+  <!-- model script -->
+  <script src="/model/pokemon-fetch.js"></script>
+
+  <!-- helpers -->
+  <script src="/helpers/helpers.js"></script>
+
+  <!-- main  -->
+  <script src="/main.js"></script>
+  </body>
+</html>
