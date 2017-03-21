@@ -10,7 +10,6 @@
 
   let pokemonURL = 'http://pokeapi.co/api/v2/pokemon';
 
-
   //created constructor function to instantiate new objects from data so I could have an easier time templating it with my own formatted properties
   function Pokemon(opts){
     this.name = opts.name;

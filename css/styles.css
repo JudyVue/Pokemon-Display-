@@ -3,16 +3,24 @@ body {
 }
 
 table {
+  font-size: 1em;
   display: flex;
-  max-width: 80%;
+  /*max-width: 100%;*/
 }
 
 
-th {
+.header td {
+  background-color: #e6e600;
+  color: black;
   padding-right: 4em;
+  margin: auto;
+  justify-content: center;
 }
 
 td {
+  margin: auto;
+  background-color: #2b547e;
+  color: white;
   padding-right: 2em;
   border-bottom: ridge;
 }
@@ -23,6 +31,8 @@ td {
 
 .abilities {
   display: none;
+  background-color: #add8e6;
+  color: black;
   border: inset 2px #add8e6;
   width: 90%;
   float: right;
