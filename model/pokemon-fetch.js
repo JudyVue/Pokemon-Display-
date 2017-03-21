@@ -19,11 +19,11 @@
     this.height = opts.height;
     //comma separated list not really working
     if(opts.types[1]){
-      this.types = opts.types[0].type.name, opts.types[1].type.name;
+      this.types = `${opts.types[0].type.name}, ${opts.types[1].type.name}`;
     } else {
       this.types = opts.types[0].type.name;
     }
-    this.abilities = opts.abilities;
+    this.abilities = opts.abilities.map(a => a.ability.name);
     collection.push(this);
   }
 
