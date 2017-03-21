@@ -9,65 +9,75 @@
   let pokemonURL = 'http://pokeapi.co/api/v2/pokemon'
 
 
-  pokemon.collection = [];
 
-  let arr = [];
+  let collection = [];
 
   function Pokemon(opts){
     this.name = opts.name;
     this.species = opts.species.name;
     this.weight = opts.weight;
     this.height = opts.height;
-    this.types = opts.types;
+    //comma separated list not really working
+    if(opts.types[1]){
+      this.types = opts.types[0].type.name, opts.types[1].type.name;
+    } else {
+      this.types = opts.types[0].type.name;
+    }
     this.abilities = opts.abilities;
-    pokemon.collection.push(this);
+    collection.push(this);
   }
 
-  return pokemon.fetchData = (num, callback = function(){}) => {
-    if (num <= 5){
-      superagent.get(`${pokemonURL}/${num}`)
+
+  pokemon.fetchData = (num) => {
+    for (let i = num; i <= 5; i++){
+      superagent.get(`${pokemonURL}/${i}`)
       .then(res => {
-        new Pokemon(res.body);
+        let pokemon = new Pokemon(res.body);
+        let viewObj = pokemonView.render('.pokemon-template', pokemon);
+        pokemonView.appendData('.pokemon-container', viewObj);
       })
-      .then(() => {
-        num++;
-        pokemon.fetchData(num);
-      })
-      .then(() => {
-        console.log(pokemon.collection, 'meh');
-        return pokemon.collection;
-      })
-      .then((collection) => {
-        callback(collection);
-      })
-      .catch(err => console.error(err));
     }
+  }
 
-  };
+  pokemon.fetchData(1);
 
-  // pokemon.fetchData(1);
-
-  // superagent.get(pokemonURL)
-  // .then(res => {
-  //   console.log(res.body);
-  //   let section = res.body.results.slice(0, 5);
-  //   console.log(section);
-  //   return section;
-  // })
-  // .then(res => {
-  //   res.forEach(pokemon => {
-  //     console.log(pokemon.url, 'what is here???');
-  //     superagent.get(pokemon.url)
-  //     .then(res => {
-  //       console.log(res.body, 'jaja');
-  //       let newPokemon = new Pokemon(res.body);
-  //       pokemon.collection.push(newPokemon);
-  //       console.log(arr, 'what');
-  //     })
-  //     .catch(err => console.error(err));
+  // pokemon.fetchData = (num) => {
+  //   return new Promise((resolve, reject) => {
+  //     if (num <= 5){
+  //       superagent.get(`${pokemonURL}/${num}`)
+  //       .then(res => {
+  //         new Pokemon(res.body);
+  //       })
+  //       .then(() => {
+  //         num++;
+  //         pokemon.fetchData(num);
+  //       })
+  //       .then(() => {
+  //         console.log(pokemon.collection);
+  //         pokemon.collection.forEach(p => {
+  //           let viewObj = pokemonView.render('.pokemon-template', p);
+  //           pokemonView.appendData('.pokemon-container', viewObj);
+  //         })
+  //
+  //       })
+  //       .catch(err => reject(err));
+  //     }
   //   });
+  // };
+
+
+  //
+  // pokemon.fetchData(1);
+  // .then(res => console.log(res, 'hmmm'));
+
+  // .then(() => {
+  //   return pokemon.collection;
   // })
-  // .catch(err => console.error(err));
+  // .then(res => {
+  //   console.log(res, 'lalala');
+  // })
+  // .catch(err => reject(err));
+
 
 
 
