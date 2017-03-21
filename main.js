@@ -4,13 +4,11 @@
 //This top level comment is here so Linter doesn't redline so-called unused vars
 /*global pokemon pokemonView:true*/
 
-
 //modularized function invocation in this main module
 const main = () => {
   let count = 1;
 
-  pokemon.fetchData(count)
-  .then(() => $('spinner').hide());
+  pokemon.fetchData(count);
 
   $('h3').hide();
 

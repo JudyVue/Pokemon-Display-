@@ -8,7 +8,7 @@
   </head>
   <body>
   <script class="pokemon-template" type="text/x-handlebars-template">
-      <tr>
+      <tr align="center">
         <td>{{ name }}</td>
         <td>{{ types }}</td>
         <td>{{ species }}</td>
@@ -16,14 +16,14 @@
         <td>{{ height }} centimeters
           <span>
             Show/Hide Abilities
-            <div class="abilities" data-clicked="">Abilities: {{ abilities }} </div>
+            <span class="abilities" data-clicked="">Abilities: {{ abilities }} </span>
           </span>
         </td>
       </tr>
   </script>
   <section class="pokemon-container">
     <table>
-      <tr class="header">
+      <tr class="header" align="center">
         <th>Name </th>
         <th>Types</th>
         <th>Species</th>
