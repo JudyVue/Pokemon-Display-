@@ -5,8 +5,18 @@
 /*global pokemon pokemonView:true*/
 
 const main = () => {
-  console.log('hit here?');
-  pokemon.fetchData(1);
+  let count = 1;
+  pokemon.fetchData(count);
+
+  $('.next').on('click', (e) => {
+    e.preventDefault();
+    $('.pokemon-container td').empty();
+
+    console.log('hit??');
+
+    count+=5;
+    pokemon.fetchData(count);
+  });
 };
 
 
