@@ -4,6 +4,8 @@
 
   /*global pokemon pokemonView:true*/
 
+  pokemon.fetchData(1);
+
 
 // pokemon.fetchData(1)
 //   .then(data => {

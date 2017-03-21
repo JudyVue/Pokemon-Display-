@@ -1,0 +1,8 @@
+table {
+  display: flex;
+  outline: solid 2px orange;
+}
+
+td {
+  padding-right: 3em;
+}

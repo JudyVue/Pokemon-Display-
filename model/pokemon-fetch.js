@@ -39,8 +39,6 @@
     }
   }
 
-  pokemon.fetchData(1);
-
   // pokemon.fetchData = (num) => {
   //   return new Promise((resolve, reject) => {
   //     if (num <= 5){
