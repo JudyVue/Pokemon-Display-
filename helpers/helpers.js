@@ -1,5 +1,6 @@
 (function(module){
   'use strict';
+  //This top level comment is here so Linter doesn't redline so-called unused vars
   /*global Handlebars:true*/
 
   let pokemonView = {};
