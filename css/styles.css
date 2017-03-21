@@ -1,14 +1,20 @@
+body {
+  font-family: 'Handlee';
+}
+
 table {
   display: flex;
   max-width: 80%;
 }
 
+
 th {
-  padding-right: 3.5em;
+  padding-right: 4em;
 }
 
 td {
   padding-right: 2em;
+  border-bottom: ridge;
 }
 
 .next {
@@ -17,6 +23,7 @@ td {
 
 .abilities {
   display: none;
+  border: inset 2px #add8e6;
 }
 
 .show {
@@ -27,18 +34,21 @@ td {
   display: none;
 }
 
-.up {
-  cursor: pointer;
-}
-
-.down {
-  cursor: pointer;
-}
-
 h3 {
   display: none;
 }
 
 .buttons {
   margin-top: 2em;
+}
+
+button {
+  border-radius: 25px;
+  width: 10%;
+  display: inline;
+}
+
+td:nth-child(5) span{
+  margin-left: 1em;
+  cursor: pointer;
 }

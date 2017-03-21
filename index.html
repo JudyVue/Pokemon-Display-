@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Handlee" rel="stylesheet">
     <title>Pokemon Table</title>
   </head>
   <body>
@@ -13,18 +14,20 @@
         <td>{{ types }}</td>
         <td>{{ species }}</td>
         <td>{{ weight }} grams</td>
-        <td>{{ height }} centimeters</td>
-        <td class="down"><span>&dArr;</span></td>
-        <td class="up"><span>&uArr;</span></td>
-        <td class="abilities">Abilities: {{ abilities }} </td>
+        <td>{{ height }} centimeters
+          <span>
+            Show/Hide Abilities
+            <div class="abilities" data-clicked="">Abilities: {{ abilities }} </div>
+          </span>
+
+        </td>
+
       </tr>
-
-
   </script>
 
   <section class="pokemon-container">
     <table>
-      <tr>
+      <tr class="header">
         <th>Name </th>
         <th>Types</th>
         <th>Species</th>
@@ -37,8 +40,8 @@
   <h3>This is the first section of Pokemon</h3>
 
   <section class="buttons">
-    <span><button class="prev">Prev</button></span>
-    <span><button class="next">Next</button></span>
+      <button class="prev">Prev</button>
+      <button class="next">Next</button>
   </section>
 
 
