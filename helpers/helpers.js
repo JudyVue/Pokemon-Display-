@@ -15,6 +15,4 @@
     $(section).append(compiledObj);
   };
 
-
-
 })(window);
