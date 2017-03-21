@@ -8,23 +8,27 @@
   <body>
 
   <script class="pokemon-template" type="text/x-handlebars-template">
-    <table>
-      <tr>
-        <td>Name: <br>{{ name }}</br></td>
-        <td>Types: <br>{{ types }}</br></td>
-        <td>Species: <br>{{ species }}</br></td>
-        <td>Weight: <br>{{ weight }} grams</br></td>
-        <td>Height: <br>{{ height }} centimeters</br></td>
-      </tr>
-      <tr>
-
-      </tr>
-
-    </table>
-
+      <!-- <tr> -->
+        <td>{{ name }}</td>
+        <td>{{ types }}</td>
+        <td>{{ species }}</td>
+        <td>{{ weight }} grams</td>
+        <td>{{ height }} centimeters</td>
+      <!-- </tr> -->
   </script>
 
-  <section class="pokemon-container"></section>
+  <section class="pokemon-container">
+
+    <table>
+      <tr>
+        <th>Name </th>
+        <th>Types</th>
+        <th>Species</th>
+        <th>Weight</th>
+        <th>Height</th>
+      </tr>
+
+  </section>
 
 
 

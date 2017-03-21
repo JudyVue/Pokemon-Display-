@@ -3,6 +3,10 @@ table {
   outline: solid 2px orange;
 }
 
+th {
+  padding-right: 2em;
+}
+
 td {
-  padding-right: 3em;
+  padding-right: 2em;
 }
