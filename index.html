@@ -7,7 +7,6 @@
     <title>Pokemon Table</title>
   </head>
   <body>
-
   <script class="pokemon-template" type="text/x-handlebars-template">
       <tr>
         <td>{{ name }}</td>
@@ -19,12 +18,9 @@
             Show/Hide Abilities
             <div class="abilities" data-clicked="">Abilities: {{ abilities }} </div>
           </span>
-
         </td>
-
       </tr>
   </script>
-
   <section class="pokemon-container">
     <table>
       <tr class="header">
@@ -34,20 +30,21 @@
         <th>Weight</th>
         <th>Height</th>
       </tr>
-
     </table>
   </section>
   <h3>This is the first section of Pokemon</h3>
-
+  <!-- TODO: Align these buttons -->
   <section class="buttons">
       <button class="prev">Prev</button>
       <button class="next">Next</button>
   </section>
 
+  <section class="spinner">
+    <img src="/assets/animal.gif">
+  </section>
 
   <!-- third party scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.5.1/superagent.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 
