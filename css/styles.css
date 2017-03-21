@@ -24,6 +24,8 @@ td {
 .abilities {
   display: none;
   border: inset 2px #add8e6;
+  width: 90%;
+  float: right;
 }
 
 .show {

@@ -41,12 +41,13 @@
           $('td:nth-child(5)').on('click', 'span', (e) => {
             e.preventDefault();
             //TODO: Get single Pokemon's abilities to show instead of all five, $(this) isn't working the way I thought it should
+            // $(this).children().find().toggle();
             $('.abilities').toggle();
           });
         })
         .catch(err => reject(err));
       }
-      resolve($('.spinner'));
+      resolve();
     });
   };
 
