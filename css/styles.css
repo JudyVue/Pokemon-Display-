@@ -1,6 +1,6 @@
 table {
   display: flex;
-  outline: solid 2px orange;
+  max-width: 80%;
 }
 
 th {
@@ -13,4 +13,24 @@ td {
 
 .next {
   margin-left: 80%;
+}
+
+.abilities {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.up {
+  cursor: pointer;
+}
+
+.down {
+  cursor: pointer;
 }

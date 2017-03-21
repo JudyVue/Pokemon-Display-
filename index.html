@@ -8,13 +8,18 @@
   <body>
 
   <script class="pokemon-template" type="text/x-handlebars-template">
-      <!-- <tr> -->
+      <tr>
         <td>{{ name }}</td>
         <td>{{ types }}</td>
         <td>{{ species }}</td>
         <td>{{ weight }} grams</td>
         <td>{{ height }} centimeters</td>
-      <!-- </tr> -->
+        <td class="down"><span>&dArr;</span></td>
+        <td class="up"><span>&uArr;</span></td>
+        <td class="abilities">Abilities: {{ abilities }} </td>
+      </tr>
+
+
   </script>
 
   <section class="pokemon-container">
@@ -26,6 +31,7 @@
         <th>Weight</th>
         <th>Height</th>
       </tr>
+
     </table>
   </section>
 
