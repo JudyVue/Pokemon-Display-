@@ -29,13 +29,16 @@ td {
   margin-left: 80%;
 }
 
+details {
+  float: right;
+  margin-left: 2em;
+}
+
 .abilities {
-  display: inline;
   background-color: #add8e6;
   color: black;
   border: inset 2px #add8e6;
   width: 90%;
-  float: right;
 }
 
 .show {
