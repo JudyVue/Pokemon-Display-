@@ -12,24 +12,19 @@
         <td>{{ name }}</td>
         <td>{{ types }}</td>
         <td>{{ species }}</td>
-        <td>{{ weight }} grams</td>
-        <td>{{ height }} centimeters
-          <span>
-            Show/Hide Abilities
-            <span class="abilities" data-clicked="">Abilities: {{ abilities }} </span>
-          </span>
+        <td>{{ weight }} g</td>
+        <td>{{ height }} cm
+
+          <details>
+            <summary>Show/Hide Abilities</summary>
+            <span class="abilities">{{ abilities }} </span>
+          </details>
         </td>
       </tr>
   </script>
   <section class="pokemon-container">
     <table>
       <tr class="header" align="right">
-        <!-- <th>Name </th>
-        <th>Types</th>
-        <th>Species</th>
-        <th>Weight</th>
-        <th>Height</th> -->
-
         <td>Name </td>
         <td>Types</td>
         <td>Species</td>

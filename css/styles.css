@@ -30,7 +30,7 @@ td {
 }
 
 .abilities {
-  display: none;
+  display: inline;
   background-color: #add8e6;
   color: black;
   border: inset 2px #add8e6;
