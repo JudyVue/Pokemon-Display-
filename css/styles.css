@@ -39,6 +39,8 @@ details {
   color: black;
   border: inset 2px #add8e6;
   width: 90%;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 .show {
