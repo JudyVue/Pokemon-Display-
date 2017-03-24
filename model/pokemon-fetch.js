@@ -34,7 +34,7 @@
 
           let pokemon = new Pokemon(res.body);
           let viewObj = pokemonView.render('.pokemon-template', pokemon);
-          pokemonView.appendData('.pokemon-container', viewObj);
+          pokemonView.appendData('tbody', viewObj);
         })
         .catch(err => reject(err));
       }

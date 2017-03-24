@@ -8,29 +8,33 @@
   </head>
   <body>
   <script class="pokemon-template" type="text/x-handlebars-template">
-      <tr align="center">
+      <tr align="center" class="table-template">
         <td>{{ name }}</td>
         <td>{{ types }}</td>
         <td>{{ species }}</td>
         <td>{{ weight }} g</td>
         <td>{{ height }} cm
-
-          <details>
-            <summary>Show/Hide Abilities</summary>
-            <span class="abilities">{{ abilities }} </span>
-          </details>
+            <details>
+              <summary>Show/Hide Abilities</summary>
+              <p class="abilities">{{ abilities }} </p>
+            </details>
         </td>
       </tr>
   </script>
   <section class="pokemon-container">
     <table>
-      <tr class="header" align="right">
-        <td>Name </td>
-        <td>Types</td>
-        <td>Species</td>
-        <td>Weight</td>
-        <td>Height</td>
-      </tr>
+        <thead>
+          <tr class="header" align="center">
+            <td>Name </td>
+            <td>Types</td>
+            <td>Species</td>
+            <td>Weight</td>
+            <td>Height</td>
+          </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
     </table>
   </section>
   <h3>This is the first section of Pokemon</h3>
