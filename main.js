@@ -16,7 +16,8 @@ const main = () => {
   $('.next').on('click', (e) => {
     e.preventDefault();
     $('h3').hide();
-    $('.pokemon-container tr').not('.header').empty();
+    // $('.pokemon-container tr').not('.header').empty();
+    $('tbody').empty();
     count+=5;
     pokemon.fetchData(count);
 
@@ -30,7 +31,8 @@ const main = () => {
       $('h3').show();
     } else {
       count-=5;
-      $('.pokemon-container tr').not('.header').empty();
+      // $('.pokemon-container tr').not('.header').empty();
+      $('tbody').empty();
       pokemon.fetchData(count);
     }
   });
