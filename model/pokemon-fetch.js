@@ -13,7 +13,6 @@
   //created constructor function to instantiate new objects from data so I could have an easier time templating it with my own formatted properties
   function Pokemon(opts){
     this.name = opts.name;
-    this.species = opts.species.name;
     this.weight = opts.weight;
     this.height = opts.height;
     //displays a comma separated list of the Pokemon's types
