@@ -24,7 +24,7 @@
   pokemon.fetchData = (num) => {
     return new Promise((resolve, reject) => {
       for (let i = num; i <= num + 4; i++){
-        superagent.get(`${pokemonURL}/${i}`)
+        superagent.get(`${pokemonURL}/${i}/`)
         .then(res => {
 
           //TODO: Figuring out how to get spinner to hide when info is rendered
