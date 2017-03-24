@@ -31,6 +31,7 @@ td {
 details {
   float: right;
   margin-left: 2em;
+  cursor: pointer;
 }
 
 .abilities {
@@ -62,12 +63,12 @@ button {
   border-radius: 25px;
   width: 10%;
   display: inline;
-}
-
-td:nth-child(5) span{
-  margin-left: 1em;
   cursor: pointer;
 }
+
+/*td:nth-child(5) p {
+  margin-left: 1em;
+}*/
 
 .spinner {
   display: none;

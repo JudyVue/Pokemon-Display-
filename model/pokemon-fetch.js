@@ -22,7 +22,6 @@
     this.abilities = opts.abilities.map(a => a.ability.name);
   }
 
-
   pokemon.fetchData = (num) => {
     return new Promise((resolve, reject) => {
       for (let i = num; i <= num + 4; i++){
