@@ -17,11 +17,10 @@
     this.weight = opts.weight;
     this.height = opts.height;
     //displays a comma separated list of the Pokemon's types
-    this.types = opts.types.map(t => t.type.name);
+    this.types = opts.types.map(t => ` ${t.type.name}`);
     //grab the ability names to show as comma separated list
-    this.abilities = opts.abilities.map(a => a.ability.name);
+    this.abilities = opts.abilities.map(a => ` ${a.ability.name}`);
   }
-
 
   pokemon.fetchData = (num) => {
     return new Promise((resolve, reject) => {
